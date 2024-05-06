@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exagerao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #frase {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        #boton {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        #boton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minerva quiero decirte que:</h1>
+    <div id="frase"></div>
+    <button id="boton" onclick="generarFrase()">Mostrar...</button>
+
+    <script>
+        // Array de frases
+        var frasesAmor = [
+            "El amor es una palabra de cuatro letras, pero con infinitos significados.",
+            "Eres la persona que ilumina mis días y llena mi corazón de alegría.",
+            "Contigo cada momento es especial y único.",
+            "Amar es encontrar en la felicidad de otro la propia felicidad.",
+            "Tu amor es como un sueño del que nunca quiero despertar.",
+            "Cada día que paso a tu lado es un regalo del destino.",
+            "El amor verdadero no tiene final feliz, porque simplemente no tiene final.",
+            "Eres mi mejor historia de amor.",
+            "Amarte es la mejor decisión que he tomado en mi vida."
+        ];
+
+        // Funcion para generar una frase aleatoria y mostrarla
+        function generarFrase() {
+            var indice = Math.floor(Math.random() * frasesAmor.length);
+            var frase = frasesAmor[indice];
+            document.getElementById("frase").innerHTML = frase;
+        }
+    </script>
+</body>
+</html>
